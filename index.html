@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="w-75 mx-auto py-5">
+            <h1 class="mb-5">product management system</h1>
+            <div class="form-group mb-3">
+                <label for="productName" class="mb-2">productName</label>
+                <input type="text" name="" oninput="validProductName()" id="productName" class="form-control border-3 " placeholder="product name">
+                <p class="text-danger d-none" id="wrongName">wrooong</p>
+            </div>
+            <div class="form-group mb-3">
+                <label for="productPrice" class="mb-2">productPrice</label>
+                <input type="text" name="" id="productPrice" class="form-control border-3 border-dark" placeholder="product price">
+            </div>
+            <div class="form-group mb-3">
+                <label for="productModel" class="mb-2">productModel</label>
+                <input type="text" name="" id="productModel" class="form-control border-3 border-dark" placeholder="product model">
+            </div>
+            <div class="form-group mb-3">
+                <label for="productDesc" class="mb-2">productDesc</label>
+                <textarea name="productDesc" class="form-control border-3 border-dark" id="productDesc" ></textarea>
+            </div>
+            <button onclick="addProduct()" id="addProductBtn" class="btn btn-primary">Add product</button>
+            <button onclick="updateProduct()" class="btn btn-warning d-none" id="UpdateProductBtn">update product</button>
+        </div>
+
+        <div class="w-75 mx-auto py-5">
+            <h4>Search .....</h4>
+            <input type="text" oninput="searchByName(this.value)" class="form-control" name="" id="">
+        </div>
+
+        <table class="table text-white text-center w-75 mx-auto">
+            <thead>
+                <th>index</th>
+                <th>productName</th>
+                <th>productPrice</th>
+                <th>productModel</th>
+                <th>productDesc</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>  
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
